@@ -1,0 +1,156 @@
+.main{
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    backdrop-filter: blur(20px);
+    width: 75vw;
+    height: 80vh;
+    margin-top: 10vh;
+}
+
+.infoIcon{
+    color: blue;
+    cursor: pointer;
+}
+
+.parallel{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.9;
+   background-image: url("https://images.unsplash.com/photo-1534187886935-1e1236e856c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtcGluZyUyMHNpdGV8ZW58MHx8MHx8&w=1000&q=80");
+   filter: blur(5px);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
+
+.small_logo{
+    height: 100%;
+    width: 100%;
+    transform: scale(1.5);
+}
+
+.logoBox{
+    /* border: 1px solid red; */
+    height: 140px;
+    width: 140px;
+     /* overflow: hidden; */
+     margin: 0px auto;
+   
+}
+
+
+.small_logo_cont{
+    display: flex;
+    justify-content: center;
+}
+
+
+.auth_left{
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    background-image: url("https://images.unsplash.com/photo-1534187886935-1e1236e856c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtcGluZyUyMHNpdGV8ZW58MHx8MHx8&w=1000&q=80");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.auth_right{
+    width: 60%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* padding: 20px 0px; */
+    padding-top: 50px;
+    background-color: snow;
+    overflow-y: auto; 
+}
+
+.logo_image{
+    height: 200px;
+}
+
+.input_box{
+    width: 90%;
+    margin: auto;
+    
+}
+
+.input_box > div{
+    margin: 25px 0px;
+}
+
+.name_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.errorText{
+    color: red;
+    margin: 5px 0px;
+    font-size: 12px;
+}
+
+.googleIcon{
+    margin-right: 10px;
+}
+
+.centerAlign{
+    text-align: center;
+}
+
+a{
+    color: cadetblue;
+    text-decoration: none;
+}
+
+.forPassCont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forPassCont >div > a {
+    color: black;
+    font-size: 12px;
+}
+
+.butt_containn{
+    display: flex;
+    margin-top: 15px;
+}
+
+.account_type{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 5px;
+}
+

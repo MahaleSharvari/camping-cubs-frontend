@@ -1,0 +1,97 @@
+.mainCard{
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: hidden;
+}
+
+.cardImage{
+    height: 250px;
+    width: 100%;
+}
+
+.mainCard:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(1.09);
+}
+
+.cardName{
+    font-size: 14px;
+    color: grey;
+    padding: 0px 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2; */
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    margin: 5px 10px;
+    /* height: 13%; */
+}
+
+.locationDiv{
+    padding: 10px 10px;
+    font-size: 14px;
+    color: dimgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.state{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    width: 70%;
+}
+
+.statName{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.recomm{
+    color: green;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: end;
+    padding-right: 15px;
+}
+
+.fav{
+    z-index: 1;
+    margin-top: -340px;
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: black;
+    
+}
+
+.favIcoBack{
+    background-color: rgb(213, 224, 221);
+    border-radius: 10px;
+    opacity: 0.4;
+}
+
+.addedfavIcoBack{
+    background-color: rgb(213, 224, 221);
+    border-radius: 10px;
+    opacity: 0.4;
+    color: darkgreen;
+}
+
+.favIcoBack:hover,.addedfavIcoBack:hover{
+    scale: 1.5;
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+.abcd{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}

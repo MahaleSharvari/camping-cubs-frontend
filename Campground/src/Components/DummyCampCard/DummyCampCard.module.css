@@ -1,0 +1,74 @@
+.mainCard{
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: hidden;
+}
+
+.cardImage{
+    height: 250px;
+    width: 100%;
+}
+
+.mainCard:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(1.09);
+}
+
+.cardName{
+    font-size: 14px;
+    color: grey;
+    padding: 0px 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2; */
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    margin: 5px 10px;
+    /* height: 13%; */
+}
+
+.locationDiv{
+    padding: 10px 10px;
+    font-size: 14px;
+    color: dimgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.state{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    width: 70%;
+}
+
+.statName{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.recomm{
+    color: green;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: end;
+    padding-right: 15px;
+}
+
+.greyText{
+    color: grey;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.dummyName{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+}
