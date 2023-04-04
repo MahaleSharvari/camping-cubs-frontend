@@ -102,7 +102,8 @@ function Login() {
       localStorage.setItem("token",res.token);
       localStorage.setItem("isAdmin",res.user.admin);
       setTimeout(() => {
-        navigate("/");
+        res.user.admin && navigate("/myCampground");
+        !res.user.admin && navigate("/user/explore");
       }, 2000);
     }
   };

@@ -102,6 +102,10 @@ function Dashboard({element}) {
     navigate("/login");
   }
 
+  const handleHomeNavigate = ()=>{
+    navigate("/");
+  }
+
   React.useEffect(()=>{
     console.log(nav_head);
   })
@@ -159,10 +163,12 @@ function Dashboard({element}) {
               px: [1],
             }}
           >
+            <IconButton  onClick={handleHomeNavigate}>
             <Box className={styles.logiDiv}>
             <GiCampingTent className={styles.navLogo}/>
             <Box>Camping Cubs</Box>
-        </Box>
+           </Box>
+            </IconButton>
             <IconButton onClick={toggleDrawer}>
               <ChevronLeftIcon />
             </IconButton>

@@ -28,6 +28,7 @@ function Routers() {
       console.log(isAdmin);
       token && isAdmin == "false" && navigate("/user/explore");
       token && isAdmin == "true" && navigate("/myCampground");
+      return
     }
 
     const auth = ["/login","/register","/forgotpassword"];
@@ -37,7 +38,6 @@ function Routers() {
   }
 
 const headset=()=>{
-  console.log(location.pathname)
   location.pathname == "/addcampground"  && dispatch(addNavData("Add a Campground"));
   location.pathname == "/"  && dispatch(addNavData("Camping Cubs"));
   location.pathname == "/profile" && dispatch(addNavData("Profile"));
@@ -50,7 +50,7 @@ const headset=()=>{
 
 
   useEffect(()=>{
-    authChecker();
+    // authChecker();
     headset();
   },[location.pathname])
 
