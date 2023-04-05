@@ -16,6 +16,7 @@ import ExploreCamps from '../Screens/User/ExploreCamps/ExploreCamps';
 import SeeCampground from '../Screens/User/SeeCampground/SeeCampground';
 import Wishlist from '../Screens/User/Wishlist/Wishlist';
 import Booking from '../Screens/User/Booking/Booking';
+import Suggestion from '../Screens/User/Suggestion/Suggestion';
 
 function Routers() {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ const headset=()=>{
   location.pathname == "/user/explore" && dispatch(addNavData("Explore Campgrounds"));
   location.pathname == "/user/wishlist" && dispatch(addNavData("Wishlist"));
   location.pathname == "/user/booking" && dispatch(addNavData("Your Booking"));
+  location.pathname == "/user/suggestion" && dispatch(addNavData("Suggested Campground"));
 }
 
 
@@ -69,6 +71,7 @@ const headset=()=>{
             <Route path='/user/seeCampground' element={<Dashboard element={<SeeCampground/>}/>}/>
             <Route path='/user/wishlist' element={<Dashboard element={<Wishlist/>}/>}/>
             <Route path='/user/booking' element={<Dashboard element={<Booking/>}/>}/>
+            <Route path='/user/suggestion' element={<Dashboard element={<Suggestion/>}/>}/>
         </Routes>
     </Box>
   )
