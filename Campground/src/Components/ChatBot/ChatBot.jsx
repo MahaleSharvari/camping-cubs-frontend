@@ -63,7 +63,6 @@ function ChatBot() {
         res
           .json()
           .then((res) => {
-            console.log(res);
             res.answer &&
               setMessages([
                 ...message,

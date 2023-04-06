@@ -26,7 +26,6 @@ function Routers() {
     const token = localStorage.getItem("token");
     const isAdmin = localStorage.getItem("isAdmin");
     if(location.pathname == "/"){
-      console.log(isAdmin);
       token && isAdmin == "false" && navigate("/user/explore");
       token && isAdmin == "true" && navigate("/myCampground");
       return
