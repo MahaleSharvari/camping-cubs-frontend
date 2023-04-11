@@ -11,13 +11,12 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { MainListItems } from './Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import { useSelector } from 'react-redux';
 import { GiCampingTent } from 'react-icons/gi';
@@ -76,7 +75,9 @@ const mdTheme = createTheme();
 
 function Dashboard({element}) {
   const [open, setOpen] = React.useState(true);
+  const dashboardRef = React.useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -84,12 +85,20 @@ function Dashboard({element}) {
 
   const handleLogout = ()=>{
     localStorage.clear();
-    navigate("/login");
+    navigate('/login', { replace: true });
   }
 
   const handleHomeNavigate = ()=>{
     navigate("/");
   }
+
+  function scrollToBottom() {
+    dashboardRef.current.scrollTop = 0;
+  }
+
+  React.useEffect(()=>{
+    scrollToBottom();
+  },[location.pathname])
 
 
   return (
@@ -164,6 +173,7 @@ function Dashboard({element}) {
         </Drawer>
         <Box
           component="main"
+          ref={dashboardRef}
           sx={{
             backgroundColor: (theme) =>
               theme.palette.mode === 'light'
