@@ -414,7 +414,15 @@ function HorizontalLinearStepper({ campId, price }) {
                             onChange={handleChange}
                             autoComplete={"off"}
                             fullWidth
-                            value={values.phoneNumber.trim()}
+                            type="number"
+                            inputProps={{
+                              maxLength:10,
+                              pattern: "[0-9]*", // Only allow numeric input
+                              onInput: (e) => {
+                                e.target.value = e.target.value.slice(0, 10);
+                              },
+                            }}
+                            value={values.phoneNumber}
                             size={"small"}
                             placeholder={"Enter Phone Number"}
                             name={"phoneNumber"}
@@ -477,7 +485,15 @@ function HorizontalLinearStepper({ campId, price }) {
                           onChange={handleChange}
                           autoComplete={"off"}
                           fullWidth
-                          value={values.govId.trim()}
+                          value={values.govId}
+                          type="number"
+                          inputProps={{
+                            maxLength:12,
+                            pattern: "[0-9]*", // Only allow numeric input
+                            onInput: (e) => {
+                              e.target.value = e.target.value.slice(0, 12);
+                            },
+                          }}
                           size={"small"}
                           placeholder={"Enter Gov* Id"}
                           name={"govId"}

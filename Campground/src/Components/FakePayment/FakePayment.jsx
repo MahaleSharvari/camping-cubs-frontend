@@ -58,7 +58,15 @@ function FakePayment({priceData,bookCampgroundApi}) {
                             onChange={handleChange}
                             autoComplete={"off"}
                             fullWidth
-                            value={values.cvv.trim()}
+                            value={values.cvv}
+                            type="number"
+                            inputProps={{
+                              maxLength:10,
+                              pattern: "[0-9]*", // Only allow numeric input
+                              onInput: (e) => {
+                                e.target.value = e.target.value.slice(0, 3);
+                              },
+                            }}
                             size={"small"}
                             placeholder={"Enter CVV"}
                             name={"cvv"}
@@ -89,7 +97,10 @@ function FakePayment({priceData,bookCampgroundApi}) {
                             onChange={handleChange}
                             autoComplete={"off"}
                             fullWidth
-                            value={values.cardNumber.trim()}
+                            value={values.cardNumber.replace(/\D/g, '').replace(/(\d{4})/g, '$1-').replace(/-$/, '')}
+                            inputProps={{
+                              maxLength: 19, // Maximum length including hyphens
+                            }}
                             size={"small"}
                             placeholder={"Enter Card Number"}
                             name={"cardNumber"}
