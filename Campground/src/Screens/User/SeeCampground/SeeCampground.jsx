@@ -394,7 +394,7 @@ function HorizontalLinearStepper({ campId, price }) {
                             onChange={handleChange}
                             autoComplete={"off"}
                             fullWidth
-                            value={values.name.trim()}
+                            value={values.name}
                             size={"small"}
                             placeholder={"Enter Name"}
                             name={"name"}
